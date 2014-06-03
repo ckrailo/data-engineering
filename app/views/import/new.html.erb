@@ -1,0 +1,6 @@
+<h2>Import Tab-Delimited Purchase Data</h2>
+<%= form_tag import_path, multipart: true do %>
+  <div><%= file_field_tag :file %></div>
+  <br>
+  <div><%= submit_tag "Import" %></div>
+<% end %>

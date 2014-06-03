@@ -1,0 +1,13 @@
+<h2>Revenue Reported in This Upload</h2>
+<h3>Total Revenue Across Merchants: <%= price @overall_revenue %></h3>
+<h3>Total Revenue Per Merchant</h3>
+<table>
+  <% @revenue_per_merchant.each do |merchant, revenue| %>
+    <tr>
+      <td><%= link_to merchant.name, merchant %></td>
+      <td><%= price revenue %></td>
+    </tr>
+  <% end %>
+</table>
+<br>
+<div><%= link_to "Home", '/' %></div>
